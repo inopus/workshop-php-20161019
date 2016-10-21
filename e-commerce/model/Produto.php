@@ -58,4 +58,4 @@ class Produto{
         return $total;
     }
 
-} ?>
+}

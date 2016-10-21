@@ -2,12 +2,19 @@
 require_once 'Produto.php';
 
 class Alimento extends Produto{
-	private $dataValidade;
+	private $dataValidade; // formato aaaa-mm-dd hh:mm:ss
     private $temperatura;
     
     function __construct($dataValidade, $temperatura){
 		$this->dataValidade = $dataValidade;
         $this->temperatura = $temperatura;
+	}
+    
+    function isValid (){
+        if(time() <= strtotime($this->getDataValidade()))
+            return true;
+        else 
+            return false;
 	}
     
     function getDataValidade(){
@@ -25,10 +32,4 @@ class Alimento extends Produto{
     function setTemperatura($temperatura){
         $this->temperatura = $temperatura;
     }
-	
-	function verificaValidade (){
-	}
-
 }
-
-?>
