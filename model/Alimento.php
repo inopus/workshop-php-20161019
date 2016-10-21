@@ -5,7 +5,7 @@ class Alimento extends Produto{
 	private $dataValidade;
     private $temperatura;
     
-    function __constructor($dataValidade, $temperatura){
+    function __construct($dataValidade, $temperatura){
 		$this->dataValidade = $dataValidade;
         $this->temperatura = $temperatura;
 	}

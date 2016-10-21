@@ -5,7 +5,7 @@ class Vestuario extends Produto{
 	private $tamanho;
     private $sexo;
     
-    function __constructor($tamanho, $sexo){
+    function __construct($tamanho, $sexo){
 		$this->tamanho = $tamanho;
         $this->sexo = $sexo;
 	}

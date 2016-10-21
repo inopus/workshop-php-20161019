@@ -5,7 +5,7 @@ class Eletronico extends Produto{
 	private $voltagem;
     private $garantia;
     
-    function __constructor($voltagem, $garantia){
+    function __construct($voltagem, $garantia){
 		$this->voltagem = $voltagem;
         $this->garantia = $garantia;
 	}
@@ -26,7 +26,12 @@ class Eletronico extends Produto{
         $this->$garantia = $garantia;
     }
 	
-	function isBivolt (){
+	function isBivolt(){
+        if($this->$voltagem == 'BIVOLT'){
+            return true;
+        }else{
+            return false;
+        }
 	}
 
 }

@@ -5,7 +5,7 @@ class Produto{
 	private $preco;
     private $categoria;
     
-	function __constructor($nome, $qtdEstoque, $preco, $categoria){
+	function __construct($nome, $qtdEstoque, $preco, $categoria){
 		$this->nome = $nome;
         $this->qtdEstoque = $qtdEstoque;
         $this->preco = $preco;
@@ -44,8 +44,8 @@ class Produto{
         return $this->categoria;
     }
 
-    function valorEstoque($qtdEstoque, $preco){
-        $total = $qtdEstoque * $preco;
+    function valorEstoque(){
+        $total = $this->qtdEstoque * $this->preco;
         return $total;
     }
 
