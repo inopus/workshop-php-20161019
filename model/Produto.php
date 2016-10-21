@@ -4,6 +4,7 @@ class Produto{
 	private $qtdEstoque;
 	private $preco;
     private $categoria;
+    private $imagem;
     
 	function __construct($nome, $qtdEstoque, $preco, $categoria){
 		$this->nome = $nome;
@@ -44,6 +45,14 @@ class Produto{
         return $this->categoria;
     }
 
+    function setImagem($imagem){
+        return $this->imagem = $imagem;
+    }
+    
+    function getImagem(){
+        return $this->imagem;
+    }
+    
     function valorEstoque(){
         $total = $this->qtdEstoque * $this->preco;
         return $total;
