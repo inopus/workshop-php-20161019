@@ -9,6 +9,4 @@
     //DAO
     require_once 'dao/ProdutosDAO.php';
 
-
     session_start();
-?>

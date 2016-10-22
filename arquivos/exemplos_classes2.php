@@ -21,5 +21,3 @@ echo 'Categoria:' . $alimento->getCategoria() . '</br>';
 echo 'Imagem:' . $alimento->getImagem() . '</br>';
 echo 'Data de validade:' . $alimento->getDataValidade() . '</br>';
 echo 'Válido:' . $alimento->isValid() . '</br>';
-
-?>

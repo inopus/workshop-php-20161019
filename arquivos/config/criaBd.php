@@ -1,6 +1,4 @@
 <?php
-    require_once 'bd.php';
-
     $tblProdutos = $db->prepare("
         CREATE TABLE IF NOT EXISTS Produtos
         (
@@ -12,6 +10,5 @@
             imagem VARCHAR(255),
             PRIMARY KEY (ID)
         );");
-    $tblProdutos->execute();
 
-?>
+    $tblProdutos->execute();

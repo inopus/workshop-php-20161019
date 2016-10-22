@@ -3,7 +3,6 @@ $db = new PDO("mysql:host=localhost:3306;dbname=workshop", "root", "root", array
 
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//$stm = $db->prepare("select id, usuario, tipo from Usuario where usuario = :u and senha = :s");
 //CREATE
 $stm = $db->prepare("
 CREATE TABLE IF NOT EXISTS Usuarios
