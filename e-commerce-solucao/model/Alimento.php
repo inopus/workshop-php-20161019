@@ -5,7 +5,8 @@ class Alimento extends Produto{
 	private $dataValidade; // formato aaaa-mm-dd hh:mm:ss
     private $temperatura;
     
-    function __construct($dataValidade, $temperatura){
+    function __construct($id, $nome, $qtdEstoque, $preco, $categoria, $imagem, $dataValidade, $temperatura){
+        parent::__construct($id, $nome, $qtdEstoque, $preco, $categoria, $imagem);
 		$this->dataValidade = $dataValidade;
         $this->temperatura = $temperatura;
 	}

@@ -5,7 +5,8 @@ class Vestuario extends Produto{
 	private $tamanho;
     private $sexo;
     
-    function __construct($tamanho, $sexo){
+    function __construct($id, $nome, $qtdEstoque, $preco, $categoria, $imagem, $tamanho, $sexo){
+        parent::__construct($id, $nome, $qtdEstoque, $preco, $categoria, $imagem);
 		$this->tamanho = $tamanho;
         $this->sexo = $sexo;
 	}

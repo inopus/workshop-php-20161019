@@ -5,7 +5,8 @@ class Eletronico extends Produto{
 	private $voltagem;
     private $garantia;
     
-    function __construct($voltagem, $garantia){
+    function __construct($id, $nome, $qtdEstoque, $preco, $categoria, $imagem, $voltagem, $garantia){
+        parent::__construct($id, $nome, $qtdEstoque, $preco, $categoria, $imagem);
 		$this->voltagem = $voltagem;
         $this->garantia = $garantia;
 	}
@@ -23,11 +24,11 @@ class Eletronico extends Produto{
     }
     
     function setGarantia($garantia){
-        $this->$garantia = $garantia;
+        $this->garantia = $garantia;
     }
 	
 	function isBivolt(){
-        if($this->$voltagem == 'BIVOLT'){
+        if($this->voltagem == 'BIVOLT'){
             return true;
         }else{
             return false;
